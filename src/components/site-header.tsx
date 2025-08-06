@@ -7,11 +7,11 @@ import { use, useState } from "react"
 
 export function SiteHeader() {
   const [loading,setLoading]=useState<boolean>(false);
-  const handleLogout=async (e)=>{
-    e.preventDefault();
-    setLoading(true);
-    await logout();
-    setLoading(false);
+  const handleLogout = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    setLoading(true)
+    await logout()
+    setLoading(false)
   }
   return (
     <header className="flex h-(--header-height) shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-(--header-height)">
